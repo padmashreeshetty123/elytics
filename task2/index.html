@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json table</title>
+    <style>
+        table {
+            width: 100%;
+            font-size: 10px;
+        }
+        
+        td {
+            font-size: 13px;
+        }
+        
+        thead tr {
+            background-color: rgb(215, 201, 201);
+        }
+        
+        td {
+            background-color: rgb(232, 220, 220);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Equipment-wise Details</h1>
+    <table>
+        <tr>
+            <th colspan="3">MACHINE NAME</th>
+            <th colspan="3">MACHINE ID</th>
+            <th colspan="6">ENERGY CONSUMED <br>(kWh)</th>
+            <th colspan="3">Active power <br> (MW)
+            </th>
+            <th colspan="3">Apparent Power <br> (MVA)</th>
+            <th colspan="3">Reactive Power <br> (MVAr)
+            </th>
+            <th colspan="3">CURRENT (Ampa)</th>
+            <th colspan="3">VOLTAGE(Volts)</th>
+            <th colspan="3">Power Factor</th>
+            <th colspan="6">IDLE Time</th>
+        </tr>
+        <tr>
+            <th colspan="3"></th>
+            <th colspan="3"></th>
+            <th colspan="2">Today</th>
+            <th colspan="2">MTD</th>
+            <th colspan="2">YTD</th>
+            <th colspan="3"></th>
+            <th colspan="3"></th>
+            <th colspan="3"></th>
+            <th colspan="3"></th>
+            <th colspan="3"></th>
+            <th colspan="3"></th>
+            <th colspan="2">Today</th>
+            <th colspan="2">MTD</th>
+            <th colspan="2">YTD</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>

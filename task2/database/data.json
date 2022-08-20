@@ -1,0 +1,35 @@
+{
+    "rows": [{
+            "MACHINENAME": "Auto Winding Machine",
+            "MACHINEID": "machine001 ",
+            "Today": 0,
+            "MTD": 0,
+            "YTD": 0,
+            "Activepower": 0.0,
+            "ApparentPower": 0.0,
+            "ReactivePower": 0.0,
+            "CURRENT": 0,
+            "VOLTAGE": 0,
+            "PowerFactor": 0,
+            "Today1": 0,
+            "MTD1": 0,
+            "YTD1": 0
+        },
+        {
+            "MACHINENAME": " Boiler Machine ",
+            "MACHINEID": "machine004 ",
+            "Today": 0,
+            "MTD": 0,
+            "YTD": 0,
+            "Activepower": 0.0,
+            "ApparentPower": 0.0,
+            "ReactivePower": 0.0,
+            "CURRENT": 0,
+            "VOLTAGE": 0,
+            "PowerFactor": 0,
+            "Today1": 0,
+            "MTD1": 0,
+            "YTD1": 0
+        }
+    ]
+}

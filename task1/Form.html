@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            margin: 0px;
+            background: url("/images/bg2.png") center center;
+            background-size: cover;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+        }
+        
+        span {
+            margin-bottom: 10px;
+        }
+        
+        .transparent {
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+        }
+        
+        .first_div {
+            width: 45%;
+            background: url("/images/star4.gif") center center;
+            background-size: cover;
+            border-radius: 20px 0px 0px 20px;
+        }
+        
+        .details {
+            display: flex;
+            width: 60%;
+            height: 99vh;
+            margin: 5vh auto;
+            text-align: center;
+            border: 1px solid white;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            height: 25px;
+            border-radius: 7px;
+            margin: 10px 0px 10px 0px;
+        }
+        
+        .details form {
+            text-align: left;
+            margin: 30px 60px 10px 60px;
+        }
+        
+        button {
+            width: 45%;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            font-size: 23px;
+            border-radius: 20px;
+            background-color: rgb(167, 167, 203);
+        }
+        
+        @media screen and (max-width:700px) {
+            .details {
+                width: 95%;
+                height: 199vh;
+                margin: 20px auto;
+            }
+            .first_div {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function validation() {
+            var pattern = /^[a-zA-Z0-9]{5,}/g;
+            var pipeline = document.forms["register_data"]["pipeline"].value;
+            if (pipeline == "" || !pattern.test(pipeline)) {
+                alert('Invalid pipeline name')
+            }
+            var project = document.forms["register_data"]["project_name"].value;
+            if (project == "" || !pattern.test(project)) {
+                alert('Invalid project name')
+            }
+            var bucket = document.forms["register_data"]["bucket_name"].value;
+            if (bucket == "" || !pattern.test(bucket)) {
+                alert('Invalid bucket name')
+            }
+            var cloud = document.forms["register_data"]["cloud"].value;
+            if (cloud == "" || !pattern.test(cloud)) {
+                alert('Invalid cloud storage file')
+            }
+            var cred = document.forms["register_data"]["cred"].value;
+            if (cred == "" || !pattern.test(cred)) {
+                alert('Invalid credential')
+            }
+            var min = document.forms["register_data"]["min"].value;
+            if (min == "" || !pattern.test(min)) {
+                alert('Invalid input to the field minute')
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="details transparent">
+        <div class="first_div">
+
+        </div>
+        <div>
+            <h1>Enter the details</h1>
+            <form action="#" method="post" name="register_data" onsubmit="return validation()">
+                <label for="source ">Select your source :</label>
+                <select name="source " id="source ">
+                    <option value=" ">Google Cloud Storage</option>
+                </select><br>
+                <label for="pipeline ">Provide a name for pipeline:</label>
+                <input type="text " name="pipeline" id="pipeline " placeholder="e.g., cust_shop_energy_gkateway001 "><br>
+                <label for="project_name ">GCS project name :</label>
+                <input type="text " name="project_name" id="project_name " placeholder="project-id "><br>
+                <label for="bucket_name ">GCS bucket name :</label>
+                <input type="text " name="bucket_name" id="bucket_name " placeholder="gs://your-bucket "><br>
+                <label for="cloud ">Input Cloud Storage File(s) :</label>
+                <input type="text " name="cloud" id="cloud " placeholder="GCS location of your files "><br>
+                <label for="cred ">GCS credentials :</label>
+                <input type="number " name="cred" id="cred "><br>
+                <label for="min ">Run Every :</label>
+                <input type="number " name="min" id="min " placeholder="(in minutes) "><br>
+                <button type="submit ">Create</button>
+                <button type="reset ">Cancel</button>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
